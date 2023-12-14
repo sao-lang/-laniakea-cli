@@ -1,0 +1,20 @@
+{
+    "name": "@laniakea-cli/builder",
+    "version": "1.0.0",
+    "description": "",
+    "main": "./dist/src/index.cjs.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {},
+    "buildOptions": {
+        "name": "builder",
+        "formats": [
+            "esm-bundler",
+            "cjs"
+        ]
+    }
+}

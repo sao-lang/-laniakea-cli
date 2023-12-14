@@ -1,0 +1,48 @@
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import path from "path";
+import viteCompression from 'vite-plugin-compression';
+import vueSetupExtend from 'vite-plugin-vue-setup-extend';
+import { visualizer } from 'rollup-plugin-visualizer';
+export default defineConfig({
+    envDir: './env',
+    envPrefix: 'MYPROJECT_',
+    plugins: [
+        vue(),
+        vueSetupExtend(),
+        visualizer(),
+        viteCompression({
+            verbose: true,
+            disable: false,
+            threshold: 10240,
+            algorithm: 'gzip',
+            ext: '.gz',
+            deleteOriginFile: true
+        }),
+    ],
+    server: {
+        host: '127.0.0.1',
+        port: <%= port %>,
+        open: true,
+    },
+    build: {
+        minify: "terser", // 必须开启：使用terserOptions才有效果
+        terserOptions: {
+            compress: {
+                //生产环境时移除console
+                drop_console: true,
+                drop_debugger: true,
+            },
+        },
+    },
+    resolve: {
+        alias: {
+            "@": path.resolve(__dirname, "./src"),
+        },
+    },
+    manualChunks(id) {
+        if (id.includes('node_modules')) {
+            return id.toString().split('node_modules/')[1].split('/')[0].toString();
+        }
+    },
+})

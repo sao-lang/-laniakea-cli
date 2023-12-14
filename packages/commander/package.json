@@ -1,0 +1,31 @@
+{
+    "name": "@laniakea-cli/commands",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "keywords": [
+        "cli"
+    ],
+    "bin": {
+        "lan": "./bin/index.js"
+    },
+    "author": "huangpuqiushi",
+    "license": "ISC",
+    "dependencies": {
+        "@laniakea-cli/utils": "workspace:*",
+        "@laniakea-cli/builder": "workspace:*"
+    },
+    "buildOptions": {
+        "name": "commander",
+        "formats": [
+            "esm-bundler",
+            "cjs"
+        ]
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "cli": {
+        "name": "lan"
+    }
+}

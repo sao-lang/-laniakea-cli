@@ -1,0 +1,12 @@
+import { createApp } from 'vue';
+<%
+    const cssExtNameMap = { sass: 'scss', stylus: 'styl', less: 'less', tailwindcss: 'css' };
+%>
+<%
+    const cssExtName = cssExtNameMap[cssProcessor];
+%>
+import './index.<%= cssExtName %>';
+<% if (cssProcessor === 'tailwindcss') { %>import './tailwind.css';<% } %>
+import App from './App.vue'
+
+createApp(App).mount('#app');

@@ -1,0 +1,14 @@
+<script lang="ts">
+    let count = 0;
+</script>
+
+<main>
+    <h1><%= buildTools[0] %> + svelte</h1>
+    <div>
+        <button class="button" on:click="{() => count++}">count is {count}</button>
+    </div>
+</main>
+
+<style scoped lang="scss">
+    @import './App.scss';
+</style>
