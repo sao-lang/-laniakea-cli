@@ -2,12 +2,13 @@
     "name": "@laniakea-cli",
     "version": "1.0.0",
     "scripts": {
-        "lintStaged": "lint-staged",
+        "lint-staged": "lint-staged",
         "build": "gulp build",
         "changeset": "changeset",
         "vp": "changeset version",
         "release": "pnpm build && pnpm release:only",
-        "release:only": "changeset publish --registry=https://registry.npmjs.org"
+        "release:only": "changeset publish --registry=https://registry.npmjs.org",
+        "prepare": "husky install"
     },
     "dependencies": {
         "@laniakea-cli/builder": "workspace:^",
@@ -64,13 +65,11 @@
         "vitest": "^0.33.0"
     },
     "lint-staged": {
-        "./src/*.ts": [
-            "eslint --fix",
-            "git add"
+        "./**/*.ts": [
+            "eslint --fix"
         ],
-        "./src/*.js": [
-            "eslint --fix",
-            "git add"
+        "./**/*.js": [
+            "eslint --fix"
         ]
     },
     "config": {

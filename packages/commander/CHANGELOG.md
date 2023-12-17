@@ -1,5 +1,14 @@
 # @laniakea-cli/commands
 
+## 1.1.1
+
+### Patch Changes
+
+-   添加相应依赖
+-   Updated dependencies
+    -   @laniakea-cli/builder@1.1.1
+    -   @laniakea-cli/utils@1.1.1
+
 ## 1.1.0
 
 ### Minor Changes
