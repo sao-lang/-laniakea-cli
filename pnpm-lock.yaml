@@ -11,7 +11,7 @@ importers:
       '@laniakea-cli/builder':
         specifier: workspace:^
         version: link:packages/builder
-      '@laniakea-cli/commands':
+      '@laniakea-cli/commander':
         specifier: workspace:^
         version: link:packages/commander
       '@laniakea-cli/utils':
@@ -33,7 +33,7 @@ importers:
         specifier: ^8.2.5
         version: 8.2.5
       ora:
-        specifier: ^5.0.0
+        specifier: ^5.4.1
         version: 5.4.1
       prettier:
         specifier: ^3.0.1

@@ -1,6 +1,6 @@
 {
     "name": "@laniakea-cli/builder",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "",
     "main": "./dist/src/index.cjs.js",
     "scripts": {
@@ -16,5 +16,8 @@
             "esm-bundler",
             "cjs"
         ]
+    },
+    "publishConfig": {
+        "access": "public"
     }
 }
