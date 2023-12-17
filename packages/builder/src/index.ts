@@ -1,4 +1,4 @@
-import { codeFormat, dirIsEmpty, logger } from '@laniakea-cli/utils';
+import { dirIsEmpty, logger } from '@laniakea-cli/utils';
 import Template from './templates';
 
 type ActionRecord = { type?: string; name?: string };

@@ -22,7 +22,7 @@ interface ExecCommandReturnObject {
     error: Error | null;
 }
 
-type ExecCommandReturnSchema = ExecCommandReturnObject | ExecCommandReturnObject[];
+// type ExecCommandReturnSchema = ExecCommandReturnObject | ExecCommandReturnObject[];
 
 type WhenManyCommandsType = () => Promise<ExecCommandReturnObject[]>;
 

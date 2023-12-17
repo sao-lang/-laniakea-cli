@@ -15,7 +15,6 @@ import {
     APP_PROJECT_BUILD_TOOLS,
     TOOL_PROJECTS,
     TOOL_PROJECT_BUILD_TOOLS,
-    getAnAvailablePort,
 } from '@laniakea-cli/utils';
 import { version, cli } from '../package.json';
 import { CommandKey, registerCommand } from '@laniakea-cli/utils';
